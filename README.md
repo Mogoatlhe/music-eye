@@ -4,7 +4,15 @@ A photo sharing website that provides an interface for sharing and saving photos
 
 ## Core Features
 
+- splash page:
+  - The only page that a user who isn't logged in has access to
+  - Must have:
+    - [ ] a tagline/explanation of the website
+    - [ ] login / registration form
+
 ## Additional Features
+
+- [ ] all pages are responsive
 
 ## Preview
 
