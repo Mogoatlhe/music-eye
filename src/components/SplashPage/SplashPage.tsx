@@ -1,11 +1,10 @@
+import SplashPageHeader from "./SplashPageHeader";
 
 const SplashPage = () => {
   return (
-    <>
-      <div>
-        <img src = "" alt = "musiceye logo"/>
-      </div>
-    </>
+    <div className = "h-screen">
+      <SplashPageHeader />
+    </div>
   )
 }
 
