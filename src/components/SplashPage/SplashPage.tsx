@@ -1,9 +1,9 @@
-import SplashPageHeader from "./SplashPageHeader";
+import Header from "./Header";
 
 const SplashPage = () => {
   return (
     <div className = "h-screen">
-      <SplashPageHeader />
+      <Header />
     </div>
   )
 }
