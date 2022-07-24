@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       stoke: ['"Stoke"', 'serif'],
-      specialElite: ['"Special Elite"', 'cursive'],
+      'special-elite': ['"Special Elite"', 'cursive'],
     },
     extend: {},
   },
