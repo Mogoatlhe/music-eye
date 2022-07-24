@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         jet: '#333030',
+        celester: '#a2f0f4',
       },
     },
   },
