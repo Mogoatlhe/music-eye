@@ -6,11 +6,11 @@ const RouteSwitch = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path = "/" element = {<SplashPage />}/>
-        <Route path = "*" element = {<NotFound />}/>
+        <Route path="/" element={<SplashPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default RouteSwitch;
