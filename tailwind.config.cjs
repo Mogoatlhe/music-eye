@@ -6,7 +6,11 @@ module.exports = {
       stoke: ['"Stoke"', 'serif'],
       'special-elite': ['"Special Elite"', 'cursive'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        jet: '#333030',
+      },
+    },
   },
   plugins: [],
 };
