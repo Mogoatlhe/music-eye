@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       stoke: ['"Stoke"', 'serif'],
       'special-elite': ['"Special Elite"', 'cursive'],
+      'space-mono': ['"Space Mono"', 'monospace'],
     },
     extend: {
       colors: {
