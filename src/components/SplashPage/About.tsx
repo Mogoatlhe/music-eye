@@ -25,7 +25,7 @@ const About = () => {
       <img
         src={image4}
         alt="song playing screenshot"
-        className="absolute opacity-40 w-8/12 mt-72 ml-28"
+        className="absolute opacity-40 w-8/12 mt-72 ml-28 sm:ml-44"
       />
       <TaglineText />
     </div>
