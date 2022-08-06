@@ -15,7 +15,6 @@ export const accessTypeSlice = createSlice({
   reducers: {
     changeAccessType: (state, action: PayloadAction<string>) => {
       state.value = action.payload;
-      alert(state.value);
     },
   },
 });
