@@ -1,11 +1,12 @@
 import logo from '../../assets/musiceye-logo.png';
 import type { RootState } from '../../app/store';
 import { useSelector, useDispatch } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { changeAccessType } from '../../features/acessType/accessTypeSlice';
 
 const SplashPageHeader = () => {
-  const accessType = useSelector((state: RootState) => state.accessType.value);
-  const dispatch = useDispatch();
+  const accessType = useAppSelector((state) => state.accessType.value);
+  const dispatch = useAppDispatch();
 
   return (
     <div className="flex fixed z-10 bg-white w-screen p-4 justify-between items-center border-b border-neutral-700 h-1/16">
