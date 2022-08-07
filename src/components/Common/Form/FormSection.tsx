@@ -1,7 +1,15 @@
-const FormSection = ({ id, type }: { id: string; type: string }) => {
+const FormSection = ({
+  id,
+  type,
+  label,
+}: {
+  id: string;
+  type: string;
+  label: string;
+}) => {
   return (
     <div>
-      <label htmlFor={id}></label>
+      <label htmlFor={id}>{label}</label>
       <input id={id} type={type} />
     </div>
   );
