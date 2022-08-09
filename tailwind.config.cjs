@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         jet: '#333030',
         celeste: '#a2f0f4',
+        'yellow-orange': '#f4ac45',
       },
     },
   },
