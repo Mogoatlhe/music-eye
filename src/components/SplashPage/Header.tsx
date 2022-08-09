@@ -1,6 +1,4 @@
 import logo from '../../assets/musiceye-logo.png';
-import type { RootState } from '../../app/store';
-import { useSelector, useDispatch } from 'react-redux';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { changeAccessType } from '../../features/acessType/accessTypeSlice';
 
