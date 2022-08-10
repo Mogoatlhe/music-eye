@@ -1,12 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
+interface AccessType {
+  accessType: string;
+  diffAccessType: string;
+  accessTypeText: string;
+}
+
 export interface AccessTypeState {
-  value: string;
+  value: AccessType;
 }
 
 const initialState: AccessTypeState = {
-  value: 'Sign Up',
+  value: {
+    accessType: 'Sign Up',
+    diffAccessType: 'Sign in',
+    accessTypeText: 'Already have an account? ',
+  },
 };
 
 export const accessTypeSlice = createSlice({
@@ -14,7 +24,15 @@ export const accessTypeSlice = createSlice({
   initialState,
   reducers: {
     changeAccessType: (state, action: PayloadAction<string>) => {
-      state.value = action.payload;
+      state.value.accessType = action.payload;
+
+      if (action.payload === 'Sign Up') {
+        state.value.accessTypeText = 'Already have an account? ';
+        state.value.diffAccessType = 'Sign in';
+      } else {
+        state.value.accessTypeText = "Don't have an account? ";
+        state.value.diffAccessType = 'Sign up';
+      }
     },
   },
 });
