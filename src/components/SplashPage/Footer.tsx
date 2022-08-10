@@ -14,7 +14,7 @@ const Footer = () => {
         <a href="https://github.com/mogoatlhe" target="_blank">
           <BsGithub />
         </a>
-        <a href="http://ofent.se">
+        <a href="http://ofent.se" target="_blank">
           <BsGlobe />
         </a>
       </p>
