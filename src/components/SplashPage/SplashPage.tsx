@@ -1,5 +1,6 @@
 import Form from '../Common/Form/Form';
 import About from './About';
+import Footer from './Footer';
 import Header from './Header';
 
 const SplashPage = () => {
@@ -8,6 +9,7 @@ const SplashPage = () => {
       <Header />
       <About />
       <Form />
+      <Footer />
     </div>
   );
 };
