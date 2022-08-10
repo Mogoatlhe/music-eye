@@ -1,6 +1,7 @@
 import FormSection from './FormSection';
 import { useAppSelector, useAppDispatch } from '../../../app/hooks';
 import { changeAccessType } from '../../../features/acessType/accessTypeSlice';
+import Button from '../../Button';
 
 const Form = () => {
   const accessType = useAppSelector((state) => state.accessType.value);
@@ -80,6 +81,10 @@ const Form = () => {
         >
           {accessType.diffAccessType}
         </button>
+      </p>
+      <Button value={accessType.accessType} />
+      <p className="text-yellow-orange text-center text-1xl font-space-mono py-2">
+        or
       </p>
     </form>
   );
