@@ -1,10 +1,10 @@
 import FormSection from './FormSection';
-import type { RootState } from '../../../app/store';
-import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useAppSelector, useAppDispatch } from '../../../app/hooks';
+import { changeAccessType } from '../../../features/acessType/accessTypeSlice';
 
 const Form = () => {
-  const accessType = useSelector((state: RootState) => state.accessType.value);
+  const accessType = useAppSelector((state) => state.accessType.value);
+  const dispatch = useAppDispatch();
   const formSectionAttributes = [
     {
       id: 'username',
@@ -28,13 +28,12 @@ const Form = () => {
     },
   ];
 
-  useEffect(() => {}, [accessType]);
   const displayFormSection = () => {
     return formSectionAttributes
       .map((formSection, index) => {
         let label = formSection.label;
 
-        if (accessType === 'Sign In' && label === 'Username') {
+        if (accessType.accessType === 'Sign In' && label === 'Username') {
           label = 'Username / Email';
         }
 
@@ -49,8 +48,8 @@ const Form = () => {
       })
       .filter((formSection, index) => {
         if (
-          accessType === 'Sign Up' ||
-          (index % 2 === 0 && accessType === 'Sign In')
+          accessType.accessType === 'Sign Up' ||
+          (index % 2 === 0 && accessType.accessType === 'Sign In')
         ) {
           return formSection;
         }
@@ -59,8 +58,29 @@ const Form = () => {
 
   return (
     <form className="p-6">
-      <p className="font-special-elite text-3xl">{accessType}</p>
-      <div>{displayFormSection()}</div>
+      <p className="font-special-elite text-4xl text-jet">
+        {accessType.accessType}
+      </p>
+      <div className="mt-2 grid grid-cols-1 gap-y-3">
+        {displayFormSection()}
+      </div>
+      <p className="font-space-mono text-jet py-3 text-center">
+        {accessType.accessTypeText}
+        <button
+          className="text-yellow-orange"
+          onClick={(e) => {
+            e.preventDefault();
+            const target = e.target as HTMLElement;
+            const targetText = target.innerText.toLowerCase();
+            const tempAccessType =
+              targetText === 'sign in' ? 'Sign In' : 'Sign Up';
+
+            return dispatch(changeAccessType(tempAccessType));
+          }}
+        >
+          {accessType.diffAccessType}
+        </button>
+      </p>
     </form>
   );
 };
