@@ -12,21 +12,25 @@ const Form = () => {
       id: 'username',
       label: 'Username',
       type: 'text',
+      minLength: 3,
     },
     {
       id: 'email',
       label: 'Email',
       type: 'email',
+      minLength: 0,
     },
     {
       id: 'password',
       label: 'Password',
       type: 'password',
+      minLength: 8,
     },
     {
       id: 'confirm-password',
       label: 'Confirm Password',
       type: 'password',
+      minLength: 8,
     },
   ];
 
@@ -45,6 +49,7 @@ const Form = () => {
             id={formSection.id}
             type={formSection.type}
             label={label}
+            minLength={formSection.minLength}
           />
         );
       })
