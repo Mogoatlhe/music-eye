@@ -1,39 +1,10 @@
 import logo from '../../assets/musiceye-logo.png';
-import { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { changeAccessType } from '../../features/acessType/accessTypeSlice';
 
 const SplashPageHeader = () => {
   const accessType = useAppSelector((state) => state.accessType.value);
   const dispatch = useAppDispatch();
-  const [accessColor, setAccessColor] = useState({
-    signUp: 'bg-celeste',
-    signIn: '',
-  });
-
-  const changeAccessColour = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
-    const target = e.target as HTMLElement;
-    const targetText = target.innerText;
-    let accessType;
-
-    if (targetText === 'Sign in') {
-      accessType = 'Sign In';
-      setAccessColor({
-        signIn: 'bg-celeste',
-        signUp: '',
-      });
-    } else {
-      accessType = 'Sign Up';
-      setAccessColor({
-        signUp: 'bg-celeste',
-        signIn: '',
-      });
-    }
-
-    return dispatch(changeAccessType(accessType));
-  };
 
   return (
     <div className="lg:flex lg:w-fit lg:bg-jet lg:h-screen lg:items-center">
@@ -53,12 +24,16 @@ const SplashPageHeader = () => {
         text-jet lg:flex-col lg:p-0 lg:h-4/6 lg:text-xl"
         >
           <div className="lg:h-3/6 lg:flex lg:w-20 lg:justify-between lg:pr-2">
-            <div className={`lg:w-1.5 ${accessColor.signIn}`}></div>
-            <button onClick={changeAccessColour}>Sign in</button>
+            <div className={`lg:w-1.5 ${accessType.accessColor.signIn}`}></div>
+            <button onClick={() => dispatch(changeAccessType('Sign In'))}>
+              Sign in
+            </button>
           </div>
           <div className="lg:h-3/6 lg:flex lg:w-20 lg:justify-between lg:pr-2">
-            <div className={`lg:w-1.5 ${accessColor.signUp}`}></div>
-            <button onClick={changeAccessColour}>Sign up</button>
+            <div className={`lg:w-1.5 ${accessType.accessColor.signUp}`}></div>
+            <button onClick={() => dispatch(changeAccessType('Sign Up'))}>
+              Sign up
+            </button>
           </div>
         </div>
       </div>
