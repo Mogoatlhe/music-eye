@@ -2,7 +2,7 @@ import { BsLinkedin, BsGithub, BsGlobe } from 'react-icons/bs';
 
 const Footer = () => {
   return (
-    <div className="bg-jet text-white p-4 font-special-elite">
+    <div className="bg-jet text-white p-4 font-special-elite lg:hidden">
       <p className="flex gap-2">
         Created by:
         <a

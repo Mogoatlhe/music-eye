@@ -6,11 +6,11 @@ import TaglineText from './TaglineText';
 
 const About = () => {
   return (
-    <div className="relative h-[100%] pt-24 bg-jet overflow-hidden">
+    <div className="relative h-[100vh] pt-24 bg-jet overflow-hidden lg:h-screen lg:w-9/12">
       <img
         src={image1}
         alt="song playing screenshot"
-        className="absolute ml-36 opacity-40"
+        className="absolute ml-36 opacity-40 md:ml-52"
       />
       <img
         src={image2}
@@ -25,7 +25,7 @@ const About = () => {
       <img
         src={image4}
         alt="song playing screenshot"
-        className="absolute opacity-40 w-8/12 mt-72 ml-28 sm:ml-44"
+        className="absolute opacity-40 w-8/12 mt-72 ml-28 sm:ml-44 md:ml-56"
       />
       <TaglineText />
     </div>

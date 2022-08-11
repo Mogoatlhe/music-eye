@@ -5,10 +5,12 @@ import Header from './Header';
 
 const SplashPage = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen lg:flex">
       <Header />
-      <About />
-      <Form />
+      <div className="lg:flex border-celeste border lg:ml-20 lg:w-full">
+        <About />
+        <Form />
+      </div>
       <Footer />
     </div>
   );

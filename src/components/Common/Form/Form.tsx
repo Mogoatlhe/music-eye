@@ -64,11 +64,11 @@ const Form = () => {
   };
 
   return (
-    <form className="p-6">
-      <p className="font-special-elite text-4xl text-jet">
+    <form className="p-6 lg:flex lg:flex-col justify-around lg:py-32">
+      <legend className="font-special-elite text-4xl text-jet">
         {accessType.accessType}
-      </p>
-      <div className="mt-2 grid grid-cols-1 gap-y-3">
+      </legend>
+      <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-8 gap-y-3">
         {displayFormSection()}
       </div>
       <p className="font-space-mono text-jet py-3 text-center">
