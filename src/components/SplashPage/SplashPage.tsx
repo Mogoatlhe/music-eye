@@ -7,7 +7,7 @@ const SplashPage = () => {
   return (
     <div className="h-screen lg:flex">
       <Header />
-      <div className="lg:flex border-celeste border lg:ml-20 lg:w-full">
+      <div className="lg:flex lg:ml-20 lg:w-full">
         <About />
         <Form />
       </div>

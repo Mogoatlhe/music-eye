@@ -6,7 +6,7 @@ import TaglineText from './TaglineText';
 
 const About = () => {
   return (
-    <div className="relative h-[100vh] pt-24 bg-jet overflow-hidden lg:h-screen lg:w-9/12">
+    <div className="relative h-[100vh] pt-24 bg-jet overflow-hidden lg:h-screen lg:w-7/12">
       <img
         src={image1}
         alt="song playing screenshot"
